@@ -10,6 +10,11 @@ https://coolors.co/30362f-625834-a59132-fffbdb-da7422
 
 /* Global styles
 ----------------------------------------------*/
+/* 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ 
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+Box model fix snippet, this should be added to all css projects
+*/
 html {
     box-sizing: border-box;
 }
@@ -21,6 +26,7 @@ body {
     color: #343434;
     margin: 0;
     padding: 0;
+    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 1.5;
@@ -46,9 +52,13 @@ h2 {
     
 }
 h1, h2 {
+    /* font-family: 'Caveat', cursive; */
     font-family: 'Patrick Hand', cursive;
-    font-weight: 400; /* Unbolds headings */
+    font-weight: 400; /* Takes unbolds headings */
 }
+/* .content-wrap > h2:first-of-type {
+    margin-top: 20px;
+} */
 .content-wrap {
     max-width: 800px;
     width: 85%;
@@ -98,7 +108,8 @@ header {
     display: inline-block;
 }
 .projects .btn:hover {
-    background: rgba(47, 48, 97, 80%);
+    background: rgba(47, 48, 97, 80%); /* convert hex to rgb: https://www.webfx.com/web-design/hex-to-rgb/ */
+}
 .project-item {
     overflow: hidden;
 }
@@ -119,8 +130,9 @@ header {
 /* Education
 ----------------------------------------------*/
 .education {
-    background-image: url(sharon-mccutcheon-unsplash.jpg);
+    background-image: url(../images/sharon-mccutcheon-unsplash.jpg);
     background-size: cover;
+    /* background-position: top right; */
     background-position: top left;
     padding-bottom: 100px;
 }
@@ -177,6 +189,7 @@ footer {
     h1 {
         font-size: 75px;
         line-height: 0.9;
+        /* margin-bottom: 20px; */
     }
     h2 {
         line-height: 1;
